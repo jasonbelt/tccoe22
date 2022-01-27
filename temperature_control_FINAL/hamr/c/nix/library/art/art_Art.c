@@ -544,6 +544,14 @@ Unit art_Art_sendOutput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPortId
   }
 }
 
+void art_Art_dispatchStatus(STACK_FRAME art_DispatchStatus result, Z bridgeId) {
+  DeclNewStackFrame(caller, "Art.scala", "art.Art", "dispatchStatus", 0);
+  DeclNewart_DispatchStatus(t_0);
+  art_ArtNativeSlang_dispatchStatus(SF (art_DispatchStatus) &t_0, bridgeId);
+  Type_assign(result, ((art_DispatchStatus) &t_0), sizeof(union art_DispatchStatus));
+  return;
+}
+
 Unit art_Art_receiveInput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPortIds) {
   DeclNewStackFrame(caller, "Art.scala", "art.Art", "receiveInput", 0);
 
@@ -551,14 +559,6 @@ Unit art_Art_receiveInput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPort
   {
     art_ArtNativeSlang_receiveInput(SF (IS_82ABD8) eventPortIds, (IS_82ABD8) dataPortIds);
   }
-}
-
-void art_Art_dispatchStatus(STACK_FRAME art_DispatchStatus result, Z bridgeId) {
-  DeclNewStackFrame(caller, "Art.scala", "art.Art", "dispatchStatus", 0);
-  DeclNewart_DispatchStatus(t_0);
-  art_ArtNativeSlang_dispatchStatus(SF (art_DispatchStatus) &t_0, bridgeId);
-  Type_assign(result, ((art_DispatchStatus) &t_0), sizeof(union art_DispatchStatus));
-  return;
 }
 
 inline B art_Art_port_extract_29_9_6239DB(STACK_FRAME_SF Option_6239DB t_0, art_UPort *_r) {

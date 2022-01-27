@@ -86,13 +86,13 @@ endif(WITH_LOC)
 
 
 add_library(main STATIC
-        runtime/stackframe.c
-        runtime/lib.h
-        runtime/stackframe.h
-        runtime/type.c
         runtime/type.h
-        runtime/misc.h
         runtime/misc.c
+        runtime/stackframe.h
+        runtime/stackframe.c
+        runtime/type.c
+        runtime/misc.h
+        runtime/lib.h
         runtime/ztype.h
         runtime/type-composite.h
         runtime/types.h
@@ -629,24 +629,24 @@ add_library(main STATIC
         library/t/type-t_TranspilerUtil.h
         library/t/t_TranspilerUtil.h
         library/t/t_TranspilerUtil.c
-        ext/ext-schedule/static_scheduler.c
-        ext/ext-schedule/process.c
         ext/ext-schedule/round_robin.c
         ext/ext-schedule/legacy.c
+        ext/ext-schedule/process.c
+        ext/ext-schedule/static_scheduler.c
         ext/ext-c/ext.c
-        ext/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl.h
-        ext/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl_api.c
-        ext/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl.c
-        ext/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl_api.h
-        ext/ext-c/TempSensor_i_tsp_tempSensor/TempSensor_i_tsp_tempSensor.h
         ext/ext-c/TempSensor_i_tsp_tempSensor/TempSensor_i_tsp_tempSensor_api.c
-        ext/ext-c/TempSensor_i_tsp_tempSensor/TempSensor_i_tsp_tempSensor.c
         ext/ext-c/TempSensor_i_tsp_tempSensor/TempSensor_i_tsp_tempSensor_api.h
+        ext/ext-c/TempSensor_i_tsp_tempSensor/TempSensor_i_tsp_tempSensor.h
+        ext/ext-c/TempSensor_i_tsp_tempSensor/TempSensor_i_tsp_tempSensor.c
+        ext/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl_api.h
+        ext/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl_api.c
+        ext/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl.h
+        ext/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl.c
+        ext/ext-c/ext.h
         ext/ext-c/Fan_i_fp_fan/Fan_i_fp_fan_api.c
-        ext/ext-c/Fan_i_fp_fan/Fan_i_fp_fan_api.h
         ext/ext-c/Fan_i_fp_fan/Fan_i_fp_fan.c
         ext/ext-c/Fan_i_fp_fan/Fan_i_fp_fan.h
-        ext/ext-c/ext.h
+        ext/ext-c/Fan_i_fp_fan/Fan_i_fp_fan_api.h
         ext/etc/ipc.c)
 
 target_include_directories(main
@@ -678,8 +678,8 @@ target_include_directories(main
         PUBLIC PUBLIC library/t/TemperatureControl/TempUnit
         PUBLIC PUBLIC ext/ext-schedule
         PUBLIC PUBLIC ext/ext-c
-        PUBLIC PUBLIC ext/ext-c/TempControl_i_tcp_tempControl
         PUBLIC PUBLIC ext/ext-c/TempSensor_i_tsp_tempSensor
+        PUBLIC PUBLIC ext/ext-c/TempControl_i_tcp_tempControl
         PUBLIC PUBLIC ext/ext-c/Fan_i_fp_fan
         PUBLIC PUBLIC ext/etc)
 

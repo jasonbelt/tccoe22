@@ -56,9 +56,9 @@ S64 art_Art_time(STACK_FRAME_ONLY);
 
 Unit art_Art_sendOutput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPortIds);
 
-Unit art_Art_receiveInput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPortIds);
-
 void art_Art_dispatchStatus(STACK_FRAME art_DispatchStatus result, Z bridgeId);
+
+Unit art_Art_receiveInput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPortIds);
 
 void art_Art_port(STACK_FRAME art_UPort result, Z p);
 

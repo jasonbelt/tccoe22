@@ -23,7 +23,7 @@ object Schedulers {
   val TempControlSystem_i_Instance_t_processor_timingProperties: ProcessorTimingProperties = ProcessorTimingProperties(
     clockPeriod = Some(2),
     framePeriod = Some(1000),
-    maxDomain = Some(3),
+    maxDomain = Some(4),
     slotTime = None())
 
   val TempControlSystem_i_Instance_tsp_tempSensor_timingProperties: ThreadTimingProperties = ThreadTimingProperties(

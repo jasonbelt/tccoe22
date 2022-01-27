@@ -409,114 +409,6 @@ Unit art_ArtNativeSlang_sendOutput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8
   }
 }
 
-inline B art_ArtNativeSlang_receiveInput_extract_114_14_376396(STACK_FRAME_SF Option_376396 t_0, art_ArtSlangMessage *_data_114_19) {
-  if (!Some_24B656__is(SF t_0)) return F;
-  *_data_114_19 = (art_ArtSlangMessage) Some_24B656_value_(Some_24B656__as(SF t_0));
-  return T;
-}
-
-inline B art_ArtNativeSlang_receiveInput_extract_117_14_376396(STACK_FRAME_SF Option_376396 t_0) {
-  return T;
-}
-
-inline B art_ArtNativeSlang_receiveInput_extract_122_14_376396(STACK_FRAME_SF Option_376396 t_11, art_ArtSlangMessage *_data_122_19) {
-  if (!Some_24B656__is(SF t_11)) return F;
-  *_data_122_19 = (art_ArtSlangMessage) Some_24B656_value_(Some_24B656__as(SF t_11));
-  return T;
-}
-
-inline B art_ArtNativeSlang_receiveInput_extract_124_14_376396(STACK_FRAME_SF Option_376396 t_11) {
-  return T;
-}
-
-Unit art_ArtNativeSlang_receiveInput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPortIds) {
-  DeclNewStackFrame(caller, "ArtNativeSlang.scala", "art.ArtNativeSlang", "receiveInput", 0);
-
-  sfUpdateLoc(112);
-  {
-    IS_82ABD8 t_8 = eventPortIds;
-    int8_t t_9 = (eventPortIds)->size;
-    for (int8_t t_10 = 0; t_10 < t_9; t_10++) {
-      Z portId = t_8->value[t_10];
-
-      sfUpdateLoc(113);
-      DeclNewOption_376396(t_1);
-      Map_9C6840_get_(SF (Option_376396) &t_1, art_ArtNativeSlang_inInfrastructurePorts(SF_LAST), portId);
-      Option_376396 t_0 = ((Option_376396) &t_1);
-      B match_113_29 = F;
-      if (!match_113_29) {
-        art_ArtSlangMessage data_114_19;
-        match_113_29 = art_ArtNativeSlang_receiveInput_extract_114_14_376396(SF t_0, &data_114_19);
-        if (match_113_29) {
-
-          sfUpdateLoc(115);
-          {
-            DeclNewTuple2_4DFC06(t_2);
-            Tuple2_4DFC06_apply(SF &t_2, portId, data_114_19);
-            DeclNewMap_9C6840(t_3);
-            Map_9C6840__sub_(SF (Map_9C6840) &t_3, art_ArtNativeSlang_inInfrastructurePorts(SF_LAST), (Tuple2_4DFC06) (&t_2));
-            art_ArtNativeSlang_inInfrastructurePorts_a(SF (Map_9C6840) ((Map_9C6840) &t_3));
-          }
-
-          sfUpdateLoc(116);
-          {
-            S64 t_5 = art_Art_time(SF_LAST);
-            DeclNewart_ArtSlangMessage(t_4);
-            art_ArtSlangMessage_apply(SF &t_4, (art_DataContent) art_ArtSlangMessage_data_(data_114_19), art_ArtSlangMessage_srcPortId_(data_114_19), art_ArtSlangMessage_dstPortId_(data_114_19), art_ArtSlangMessage_putValueTimestamp_(data_114_19), art_ArtSlangMessage_sendOutputTimestamp_(data_114_19), art_ArtSlangMessage_dstArrivalTimestamp_(data_114_19), t_5);
-            DeclNewTuple2_4DFC06(t_6);
-            Tuple2_4DFC06_apply(SF &t_6, portId, (&t_4));
-            DeclNewMap_9C6840(t_7);
-            Map_9C6840__add_(SF (Map_9C6840) &t_7, art_ArtNativeSlang_inPortVariables(SF_LAST), (Tuple2_4DFC06) (&t_6));
-            art_ArtNativeSlang_inPortVariables_a(SF (Map_9C6840) ((Map_9C6840) &t_7));
-          }
-        }
-      }
-      if (!match_113_29) {
-        match_113_29 = art_ArtNativeSlang_receiveInput_extract_117_14_376396(SF t_0);
-        if (match_113_29) {
-        }
-      }
-      sfAssert(match_113_29, "Error when pattern matching.");
-    }
-  }
-
-  sfUpdateLoc(120);
-  {
-    IS_82ABD8 t_15 = dataPortIds;
-    int8_t t_16 = (dataPortIds)->size;
-    for (int8_t t_17 = 0; t_17 < t_16; t_17++) {
-      Z portId = t_15->value[t_17];
-
-      sfUpdateLoc(121);
-      DeclNewOption_376396(t_12);
-      Map_9C6840_get_(SF (Option_376396) &t_12, art_ArtNativeSlang_inInfrastructurePorts(SF_LAST), portId);
-      Option_376396 t_11 = ((Option_376396) &t_12);
-      B match_121_29 = F;
-      if (!match_121_29) {
-        art_ArtSlangMessage data_122_19;
-        match_121_29 = art_ArtNativeSlang_receiveInput_extract_122_14_376396(SF t_11, &data_122_19);
-        if (match_121_29) {
-
-          sfUpdateLoc(123);
-          {
-            DeclNewTuple2_4DFC06(t_13);
-            Tuple2_4DFC06_apply(SF &t_13, portId, data_122_19);
-            DeclNewMap_9C6840(t_14);
-            Map_9C6840__add_(SF (Map_9C6840) &t_14, art_ArtNativeSlang_inPortVariables(SF_LAST), (Tuple2_4DFC06) (&t_13));
-            art_ArtNativeSlang_inPortVariables_a(SF (Map_9C6840) ((Map_9C6840) &t_14));
-          }
-        }
-      }
-      if (!match_121_29) {
-        match_121_29 = art_ArtNativeSlang_receiveInput_extract_124_14_376396(SF t_11);
-        if (match_121_29) {
-        }
-      }
-      sfAssert(match_121_29, "Error when pattern matching.");
-    }
-  }
-}
-
 inline B art_ArtNativeSlang_dispatchStatus_extract_95_12(STACK_FRAME_SF art_DispatchPropertyProtocol t_0) {
   if (!art_DispatchPropertyProtocol_Periodic__is(SF t_0)) return F;
   return T;
@@ -636,6 +528,114 @@ void art_ArtNativeSlang_dispatchStatus(STACK_FRAME art_DispatchStatus result, Z 
   sfAssert(match_94_57, "Error when pattern matching.");
   Type_assign(result, ret, sizeof(union art_DispatchStatus));
   return;
+}
+
+inline B art_ArtNativeSlang_receiveInput_extract_114_14_376396(STACK_FRAME_SF Option_376396 t_0, art_ArtSlangMessage *_data_114_19) {
+  if (!Some_24B656__is(SF t_0)) return F;
+  *_data_114_19 = (art_ArtSlangMessage) Some_24B656_value_(Some_24B656__as(SF t_0));
+  return T;
+}
+
+inline B art_ArtNativeSlang_receiveInput_extract_117_14_376396(STACK_FRAME_SF Option_376396 t_0) {
+  return T;
+}
+
+inline B art_ArtNativeSlang_receiveInput_extract_122_14_376396(STACK_FRAME_SF Option_376396 t_11, art_ArtSlangMessage *_data_122_19) {
+  if (!Some_24B656__is(SF t_11)) return F;
+  *_data_122_19 = (art_ArtSlangMessage) Some_24B656_value_(Some_24B656__as(SF t_11));
+  return T;
+}
+
+inline B art_ArtNativeSlang_receiveInput_extract_124_14_376396(STACK_FRAME_SF Option_376396 t_11) {
+  return T;
+}
+
+Unit art_ArtNativeSlang_receiveInput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPortIds) {
+  DeclNewStackFrame(caller, "ArtNativeSlang.scala", "art.ArtNativeSlang", "receiveInput", 0);
+
+  sfUpdateLoc(112);
+  {
+    IS_82ABD8 t_8 = eventPortIds;
+    int8_t t_9 = (eventPortIds)->size;
+    for (int8_t t_10 = 0; t_10 < t_9; t_10++) {
+      Z portId = t_8->value[t_10];
+
+      sfUpdateLoc(113);
+      DeclNewOption_376396(t_1);
+      Map_9C6840_get_(SF (Option_376396) &t_1, art_ArtNativeSlang_inInfrastructurePorts(SF_LAST), portId);
+      Option_376396 t_0 = ((Option_376396) &t_1);
+      B match_113_29 = F;
+      if (!match_113_29) {
+        art_ArtSlangMessage data_114_19;
+        match_113_29 = art_ArtNativeSlang_receiveInput_extract_114_14_376396(SF t_0, &data_114_19);
+        if (match_113_29) {
+
+          sfUpdateLoc(115);
+          {
+            DeclNewTuple2_4DFC06(t_2);
+            Tuple2_4DFC06_apply(SF &t_2, portId, data_114_19);
+            DeclNewMap_9C6840(t_3);
+            Map_9C6840__sub_(SF (Map_9C6840) &t_3, art_ArtNativeSlang_inInfrastructurePorts(SF_LAST), (Tuple2_4DFC06) (&t_2));
+            art_ArtNativeSlang_inInfrastructurePorts_a(SF (Map_9C6840) ((Map_9C6840) &t_3));
+          }
+
+          sfUpdateLoc(116);
+          {
+            S64 t_5 = art_Art_time(SF_LAST);
+            DeclNewart_ArtSlangMessage(t_4);
+            art_ArtSlangMessage_apply(SF &t_4, (art_DataContent) art_ArtSlangMessage_data_(data_114_19), art_ArtSlangMessage_srcPortId_(data_114_19), art_ArtSlangMessage_dstPortId_(data_114_19), art_ArtSlangMessage_putValueTimestamp_(data_114_19), art_ArtSlangMessage_sendOutputTimestamp_(data_114_19), art_ArtSlangMessage_dstArrivalTimestamp_(data_114_19), t_5);
+            DeclNewTuple2_4DFC06(t_6);
+            Tuple2_4DFC06_apply(SF &t_6, portId, (&t_4));
+            DeclNewMap_9C6840(t_7);
+            Map_9C6840__add_(SF (Map_9C6840) &t_7, art_ArtNativeSlang_inPortVariables(SF_LAST), (Tuple2_4DFC06) (&t_6));
+            art_ArtNativeSlang_inPortVariables_a(SF (Map_9C6840) ((Map_9C6840) &t_7));
+          }
+        }
+      }
+      if (!match_113_29) {
+        match_113_29 = art_ArtNativeSlang_receiveInput_extract_117_14_376396(SF t_0);
+        if (match_113_29) {
+        }
+      }
+      sfAssert(match_113_29, "Error when pattern matching.");
+    }
+  }
+
+  sfUpdateLoc(120);
+  {
+    IS_82ABD8 t_15 = dataPortIds;
+    int8_t t_16 = (dataPortIds)->size;
+    for (int8_t t_17 = 0; t_17 < t_16; t_17++) {
+      Z portId = t_15->value[t_17];
+
+      sfUpdateLoc(121);
+      DeclNewOption_376396(t_12);
+      Map_9C6840_get_(SF (Option_376396) &t_12, art_ArtNativeSlang_inInfrastructurePorts(SF_LAST), portId);
+      Option_376396 t_11 = ((Option_376396) &t_12);
+      B match_121_29 = F;
+      if (!match_121_29) {
+        art_ArtSlangMessage data_122_19;
+        match_121_29 = art_ArtNativeSlang_receiveInput_extract_122_14_376396(SF t_11, &data_122_19);
+        if (match_121_29) {
+
+          sfUpdateLoc(123);
+          {
+            DeclNewTuple2_4DFC06(t_13);
+            Tuple2_4DFC06_apply(SF &t_13, portId, data_122_19);
+            DeclNewMap_9C6840(t_14);
+            Map_9C6840__add_(SF (Map_9C6840) &t_14, art_ArtNativeSlang_inPortVariables(SF_LAST), (Tuple2_4DFC06) (&t_13));
+            art_ArtNativeSlang_inPortVariables_a(SF (Map_9C6840) ((Map_9C6840) &t_14));
+          }
+        }
+      }
+      if (!match_121_29) {
+        match_121_29 = art_ArtNativeSlang_receiveInput_extract_124_14_376396(SF t_11);
+        if (match_121_29) {
+        }
+      }
+      sfAssert(match_121_29, "Error when pattern matching.");
+    }
+  }
 }
 
 void art_ArtNativeSlang_sort_insert(STACK_FRAME IS_820232 result, art_UPort p, IS_820232 sorted) {

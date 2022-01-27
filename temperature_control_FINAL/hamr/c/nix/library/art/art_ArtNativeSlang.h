@@ -44,9 +44,9 @@ S64 art_ArtNativeSlang_time(STACK_FRAME_ONLY);
 
 Unit art_ArtNativeSlang_sendOutput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPortIds);
 
-Unit art_ArtNativeSlang_receiveInput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPortIds);
-
 void art_ArtNativeSlang_dispatchStatus(STACK_FRAME art_DispatchStatus result, Z bridgeId);
+
+Unit art_ArtNativeSlang_receiveInput(STACK_FRAME IS_82ABD8 eventPortIds, IS_82ABD8 dataPortIds);
 
 void art_ArtNativeSlang_sort_insert(STACK_FRAME IS_820232 result, art_UPort p, IS_820232 sorted);
 

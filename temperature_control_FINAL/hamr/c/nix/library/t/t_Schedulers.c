@@ -190,7 +190,7 @@ void t_Schedulers_init_TempControlSystem_i_Instance_t_processor_timingProperties
   DeclNewSome_488F47(t_2);
   Some_488F47_apply(SF &t_2, Z_C(1000));
   DeclNewSome_488F47(t_3);
-  Some_488F47_apply(SF &t_3, Z_C(3));
+  Some_488F47_apply(SF &t_3, Z_C(4));
   DeclNewNone_76463B(t_4);
   None_76463B_apply(SF &t_4);
   DeclNewt_ProcessorTimingProperties(t_0);
