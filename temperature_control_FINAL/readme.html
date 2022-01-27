@@ -1,0 +1,21 @@
+<h1 id="tccoe-2022-tutorial-temperature-control-final">TCCOE 2022 Tutorial - Temperature Control FINAL</h1>
+<h2 id="diagrams">Diagrams</h2>
+<h3 id="aadl-arch">AADL Arch</h3>
+<p><img src="aadl/diagrams/aadl-arch.svg" alt="AADL Arch"></p>
+<h2 id="build-run-instructions">Build/Run Instructions</h2>
+<h3 id="linux">Linux</h3>
+<p>  <strong>Regenerate Code (optional)</strong></p>
+<pre><code>  ./aadl/bin/<span class="hljs-keyword">run</span><span class="bash">-hamr-Linux.sh</span>
+</code></pre><p>  <strong>How To Build</strong></p>
+<pre><code>  .<span class="hljs-regexp">/hamr/</span>slang<span class="hljs-regexp">/bin/</span>transpile.cmd
+  .<span class="hljs-regexp">/hamr/</span>c<span class="hljs-regexp">/bin/</span><span class="hljs-keyword">compile</span>.cmd
+</code></pre><p>  <strong>How To Run</strong></p>
+<pre><code>  .<span class="hljs-regexp">/hamr/</span>c<span class="hljs-regexp">/bin/</span>run.sh
+  .<span class="hljs-regexp">/hamr/</span>c<span class="hljs-regexp">/bin/</span>stop.sh
+</code></pre><h3 id="sel4">SeL4</h3>
+<p>  <strong>Regenerate Code (optional)</strong></p>
+<pre><code>  ./aadl/bin/<span class="hljs-keyword">run</span><span class="bash">-hamr-SeL4.sh</span>
+</code></pre><p>  <strong>How To Build/Run (via QEMU)</strong></p>
+<pre><code>  .<span class="hljs-regexp">/hamr/</span>slang<span class="hljs-regexp">/bin/</span>transpile-sel4.cmd
+  .<span class="hljs-regexp">/hamr/</span>camkes<span class="hljs-regexp">/bin/</span>run-camkes.sh -s
+</code></pre>

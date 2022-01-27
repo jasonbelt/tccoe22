@@ -1,0 +1,32 @@
+<h1 id="tccoe-2022-hamr-tutorial">TCCOE 2022 HAMR Tutorial</h1>
+<h2 id="tccoe-2022-development-environment-setup">TCCOE 2022 Development Environment Setup</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>An OVA (Open Virtual Appliance) has been created that has all the development tools that will be used in this tutorial preinstalled. You will need a virtualization provider that is capable of importing the OVA such as VMWare or VirtualBox.  We recommend using VirtualBox as it is free/open-source and can be downloaded via </p>
+<p><a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a></p>
+<h3 id="import-the-ova">Import the OVA</h3>
+<ol>
+<li>Download the 6.7GB OVA <a href="https://drive.google.com/file/d/16bCMkBtSoHY9fZKJIEKdMjQK5K5C7w0P/view?usp=sharing">here</a>.</li>
+<li>In VirtualBox choose <code>File &gt;&gt; Import Appliance</code></li>
+<li>Point to the location of the downloaded <code>tccoe22.ova</code> file in the dialog box that opens and click <code>Continue</code>.</li>
+<li>Review the appliance settings in the next dialog box and choose <code>Import</code>.  This may take a couple of minutes to complete.</li>
+</ol>
+<h3 id="launch-the-virtual-machine">Launch the Virtual Machine</h3>
+<ol>
+<li>Launch the installed <code>debian-11.1-desktop-tccoe22</code> virtual machine</li>
+<li>The username and password for the virtual machine are both <code>vagrant</code>.  Enter these into the login dialog box </li>
+</ol>
+<h2 id="tutorial-material">Tutorial Material</h2>
+<p>This material has been copied into the virtual machine and is available under <code>/home/vagrant/tccoe22</code>.  It contains the following material:</p>
+<ol>
+<li><p>Directory containing an AADL model of a temperature control system that will be used to generate code via HAMR</p>
+<p><a href="temperature_control">temperature_control</a></p>
+</li>
+<li><p>Directory containing containing the completed project in which code has been generated, behavior code has been 
+added and the results have been tested under Linux and CAmkES/seL4 (via QEMU)</p>
+<p><a href="temperature_control_FINAL">temperature_control_FINAL</a></p>
+</li>
+</ol>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://hamr.sireum.org/">HAMR Website</a></li>
+</ol>

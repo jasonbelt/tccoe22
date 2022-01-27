@@ -35,6 +35,6 @@ This material has been copied into the virtual machine and is available under ``
    
    [temperature_control_FINAL](temperature_control_FINAL)
 
-## Rerferences
+## References
 
 1. [HAMR Website](https://hamr.sireum.org/)
