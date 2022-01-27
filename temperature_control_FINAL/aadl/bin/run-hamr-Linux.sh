@@ -9,7 +9,7 @@ FMIDE_CLI="$FMIDE -nosplash -console -consoleLog -data @user.home/.sireum -appli
 
 eval "$FMIDE_CLI hamr codegen \
   --verbose \
-  --platform seL4 \
+  --platform Linux \
   --package-name t \
   --output-dir $ROOT_DIR/hamr/slang \
   --output-c-dir $ROOT_DIR/hamr/c \
@@ -18,6 +18,5 @@ eval "$FMIDE_CLI hamr codegen \
   --max-string-size 256 \
   --max-array-size 1 \
   --run-transpiler \
-  --camkes-output-dir $ROOT_DIR/hamr/camkes \
   --aadl-root-dir $AADL_DIR \
   $AADL_DIR/.project"
