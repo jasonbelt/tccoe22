@@ -1,0 +1,14 @@
+#ifndef TEMPSENSOR_I_TSP_TEMPSENSOR_ADAPTER_H
+#define TEMPSENSOR_I_TSP_TEMPSENSOR_ADAPTER_H
+
+#include <all.h>
+
+Unit t_TemperatureControl_TempSensor_i_tsp_tempSensor_adapter_initialiseArchitecture(STACK_FRAME_ONLY);
+
+Unit t_TemperatureControl_TempSensor_i_tsp_tempSensor_adapter_initialiseEntryPoint(STACK_FRAME_ONLY);
+
+Unit t_TemperatureControl_TempSensor_i_tsp_tempSensor_adapter_computeEntryPoint(STACK_FRAME_ONLY);
+
+art_Bridge_EntryPoints t_TemperatureControl_TempSensor_i_tsp_tempSensor_adapter_entryPoints(STACK_FRAME_ONLY);
+
+#endif

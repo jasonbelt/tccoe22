@@ -1,0 +1,24 @@
+#ifndef SIREUM_H_t_TemperatureControl_TempControl_i_tcp_tempControl
+#define SIREUM_H_t_TemperatureControl_TempControl_i_tcp_tempControl
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <types.h>
+
+Unit t_TemperatureControl_TempControl_i_tcp_tempControl_initialise(STACK_FRAME t_TemperatureControl_TempControl_i_Initialization_Api api);
+
+Unit t_TemperatureControl_TempControl_i_tcp_tempControl_handle_fanAck(STACK_FRAME t_TemperatureControl_TempControl_i_Operational_Api api, t_TemperatureControl_FanAck_Type value);
+
+Unit t_TemperatureControl_TempControl_i_tcp_tempControl_handle_setPoint(STACK_FRAME t_TemperatureControl_TempControl_i_Operational_Api api, t_TemperatureControl_SetPoint_i value);
+
+Unit t_TemperatureControl_TempControl_i_tcp_tempControl_handle_tempChanged(STACK_FRAME t_TemperatureControl_TempControl_i_Operational_Api api);
+
+Unit t_TemperatureControl_TempControl_i_tcp_tempControl_finalise(STACK_FRAME t_TemperatureControl_TempControl_i_Operational_Api api);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

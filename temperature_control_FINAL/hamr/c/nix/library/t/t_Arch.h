@@ -1,0 +1,29 @@
+#ifndef SIREUM_H_t_Arch
+#define SIREUM_H_t_Arch
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <types.h>
+
+void t_Arch_init(STACK_FRAME_ONLY);
+
+t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge t_Arch_TempControlSystem_i_Instance_tsp_tempSensor(STACK_FRAME_ONLY);
+t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge t_Arch_TempControlSystem_i_Instance_tcp_tempControl(STACK_FRAME_ONLY);
+t_TemperatureControl_Fan_i_fp_fan_Bridge t_Arch_TempControlSystem_i_Instance_fp_fan(STACK_FRAME_ONLY);
+art_ArchitectureDescription t_Arch_ad(STACK_FRAME_ONLY);
+
+void t_Arch_init_TempControlSystem_i_Instance_tsp_tempSensor(STACK_FRAME_ONLY);
+
+void t_Arch_init_TempControlSystem_i_Instance_tcp_tempControl(STACK_FRAME_ONLY);
+
+void t_Arch_init_TempControlSystem_i_Instance_fp_fan(STACK_FRAME_ONLY);
+
+void t_Arch_init_ad(STACK_FRAME_ONLY);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

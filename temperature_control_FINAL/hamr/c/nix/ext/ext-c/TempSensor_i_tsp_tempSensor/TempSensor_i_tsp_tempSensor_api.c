@@ -1,0 +1,1 @@
+../../../../ext-c/TempSensor_i_tsp_tempSensor/TempSensor_i_tsp_tempSensor_api.c

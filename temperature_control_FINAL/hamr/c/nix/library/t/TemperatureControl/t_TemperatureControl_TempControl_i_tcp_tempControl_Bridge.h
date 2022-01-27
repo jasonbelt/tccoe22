@@ -1,0 +1,60 @@
+#ifndef SIREUM_H_t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge
+#define SIREUM_H_t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <types.h>
+
+void t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_init(STACK_FRAME_ONLY);
+
+Option_BCC9E8 t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_c_initialization_api(STACK_FRAME_ONLY);
+void t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_c_initialization_api_a(STACK_FRAME Option_BCC9E8 p_c_initialization_api);
+Option_3B7208 t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_c_operational_api(STACK_FRAME_ONLY);
+void t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_c_operational_api_a(STACK_FRAME Option_3B7208 p_c_operational_api);
+
+// t.TemperatureControl.TempControl_i_tcp_tempControl_Bridge
+
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_id_(this) ((this)->id)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_name_(this) ((String) &(this)->name)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_dispatchProtocol_(this) ((art_DispatchPropertyProtocol) &(this)->dispatchProtocol)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_dispatchTriggers_(this) ((Option_9AF35E) &(this)->dispatchTriggers)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_currentTemp_(this) ((art_Port_7B28AF) &(this)->currentTemp)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_fanAck_(this) ((art_Port_0A16CC) &(this)->fanAck)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_setPoint_(this) ((art_Port_216126) &(this)->setPoint)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_fanCmd_(this) ((art_Port_2ED9E6) &(this)->fanCmd)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_tempChanged_(this) ((art_Port_9CBF18) &(this)->tempChanged)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_ports_(this) ((art_Bridge_Ports) &(this)->ports)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_initialization_api_(this) ((t_TemperatureControl_TempControl_i_Initialization_Api) &(this)->initialization_api)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_operational_api_(this) ((t_TemperatureControl_TempControl_i_Operational_Api) &(this)->operational_api)
+#define t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_entryPoints_(this) ((art_Bridge_EntryPoints) &(this)->entryPoints)
+
+B t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge__eq(t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge this, t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge other);
+inline B t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge__ne(t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge this, t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge other) {
+  return !t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge__eq(this, other);
+};
+void t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_string_(STACK_FRAME String result, t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge this);
+void t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_cprint(t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge this, B isOut);
+
+inline B t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge__is(STACK_FRAME void* this) {
+  return ((t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge) this)->type == Tt_TemperatureControl_TempControl_i_tcp_tempControl_Bridge;
+}
+
+inline t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge__as(STACK_FRAME void *this) {
+  if (t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge__is(CALLER this)) return (t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge) this;
+  sfAbortImpl(CALLER "Invalid cast to t.TemperatureControl.TempControl_i_tcp_tempControl_Bridge.");
+  abort();
+}
+
+void t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_apply(STACK_FRAME t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge this, Z id, String name, art_DispatchPropertyProtocol dispatchProtocol, Option_9AF35E dispatchTriggers, art_Port_7B28AF currentTemp, art_Port_0A16CC fanAck, art_Port_216126 setPoint, art_Port_2ED9E6 fanCmd, art_Port_9CBF18 tempChanged);
+
+void t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_init_c_initialization_api(STACK_FRAME_ONLY);
+
+void t_TemperatureControl_TempControl_i_tcp_tempControl_Bridge_init_c_operational_api(STACK_FRAME_ONLY);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

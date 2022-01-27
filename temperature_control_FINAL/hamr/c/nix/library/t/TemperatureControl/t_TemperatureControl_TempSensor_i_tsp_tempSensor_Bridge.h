@@ -1,0 +1,57 @@
+#ifndef SIREUM_H_t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge
+#define SIREUM_H_t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <types.h>
+
+void t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_init(STACK_FRAME_ONLY);
+
+Option_87C81A t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_c_initialization_api(STACK_FRAME_ONLY);
+void t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_c_initialization_api_a(STACK_FRAME Option_87C81A p_c_initialization_api);
+Option_10368D t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_c_operational_api(STACK_FRAME_ONLY);
+void t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_c_operational_api_a(STACK_FRAME Option_10368D p_c_operational_api);
+
+// t.TemperatureControl.TempSensor_i_tsp_tempSensor_Bridge
+
+#define t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_id_(this) ((this)->id)
+#define t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_name_(this) ((String) &(this)->name)
+#define t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_dispatchProtocol_(this) ((art_DispatchPropertyProtocol) &(this)->dispatchProtocol)
+#define t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_dispatchTriggers_(this) ((Option_9AF35E) &(this)->dispatchTriggers)
+#define t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_currentTemp_(this) ((art_Port_7B28AF) &(this)->currentTemp)
+#define t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_tempChanged_(this) ((art_Port_9CBF18) &(this)->tempChanged)
+#define t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_ports_(this) ((art_Bridge_Ports) &(this)->ports)
+#define t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_initialization_api_(this) ((t_TemperatureControl_TempSensor_i_Initialization_Api) &(this)->initialization_api)
+#define t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_operational_api_(this) ((t_TemperatureControl_TempSensor_i_Operational_Api) &(this)->operational_api)
+#define t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_entryPoints_(this) ((art_Bridge_EntryPoints) &(this)->entryPoints)
+
+B t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge__eq(t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge this, t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge other);
+inline B t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge__ne(t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge this, t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge other) {
+  return !t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge__eq(this, other);
+};
+void t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_string_(STACK_FRAME String result, t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge this);
+void t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_cprint(t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge this, B isOut);
+
+inline B t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge__is(STACK_FRAME void* this) {
+  return ((t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge) this)->type == Tt_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge;
+}
+
+inline t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge__as(STACK_FRAME void *this) {
+  if (t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge__is(CALLER this)) return (t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge) this;
+  sfAbortImpl(CALLER "Invalid cast to t.TemperatureControl.TempSensor_i_tsp_tempSensor_Bridge.");
+  abort();
+}
+
+void t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_apply(STACK_FRAME t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge this, Z id, String name, art_DispatchPropertyProtocol dispatchProtocol, Option_9AF35E dispatchTriggers, art_Port_7B28AF currentTemp, art_Port_9CBF18 tempChanged);
+
+void t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_init_c_initialization_api(STACK_FRAME_ONLY);
+
+void t_TemperatureControl_TempSensor_i_tsp_tempSensor_Bridge_init_c_operational_api(STACK_FRAME_ONLY);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

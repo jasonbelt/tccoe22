@@ -1,0 +1,24 @@
+#ifndef SIREUM_H_art_scheduling_static_Schedule
+#define SIREUM_H_art_scheduling_static_Schedule
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <types.h>
+
+void art_scheduling_static_Schedule_init(STACK_FRAME_ONLY);
+
+art_scheduling_static_Schedule_DScheduleSpec art_scheduling_static_Schedule_emptyDScheduleSpec(STACK_FRAME_ONLY);
+art_scheduling_static_Schedule_DScheduleSpec art_scheduling_static_Schedule_dScheduleSpec(STACK_FRAME_ONLY);
+void art_scheduling_static_Schedule_dScheduleSpec_a(STACK_FRAME art_scheduling_static_Schedule_DScheduleSpec p_dScheduleSpec);
+
+void art_scheduling_static_Schedule_init_emptyDScheduleSpec(STACK_FRAME_ONLY);
+
+void art_scheduling_static_Schedule_init_dScheduleSpec(STACK_FRAME_ONLY);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

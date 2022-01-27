@@ -1,0 +1,12 @@
+ISZ[(Z, art.ArtSlangMessage)]=13;
+ISZ[String]=13;
+ISZ[Z]=13;
+ISZ[art.Bridge]=3;
+ISZ[art.UConnection]=4;
+ISZ[art.UPort]=5;
+ISZ[art.scheduling.static.Schedule.Slot]=13;
+MSZ[IS[Z, Z]]=13;
+MSZ[Option[art.Bridge]]=3;
+MSZ[Option[art.UPort]]=13;
+MSZ[S64]=13;
+MSZ[art.UPort]=5

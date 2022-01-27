@@ -1,0 +1,30 @@
+#ifndef SIREUM_H_t_TemperatureControl_Fan_i_Api
+#define SIREUM_H_t_TemperatureControl_Fan_i_Api
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <types.h>
+
+Unit t_TemperatureControl_Fan_i_Initialization_Api_logInfo_(STACK_FRAME t_TemperatureControl_Fan_i_Initialization_Api this, String msg);
+
+Unit t_TemperatureControl_Fan_i_Initialization_Api_logDebug_(STACK_FRAME t_TemperatureControl_Fan_i_Initialization_Api this, String msg);
+
+Unit t_TemperatureControl_Fan_i_Initialization_Api_logError_(STACK_FRAME t_TemperatureControl_Fan_i_Initialization_Api this, String msg);
+
+Unit t_TemperatureControl_Fan_i_Operational_Api_logInfo_(STACK_FRAME t_TemperatureControl_Fan_i_Operational_Api this, String msg);
+
+Unit t_TemperatureControl_Fan_i_Operational_Api_logDebug_(STACK_FRAME t_TemperatureControl_Fan_i_Operational_Api this, String msg);
+
+Unit t_TemperatureControl_Fan_i_Operational_Api_logError_(STACK_FRAME t_TemperatureControl_Fan_i_Operational_Api this, String msg);
+
+Unit t_TemperatureControl_Fan_i_Initialization_Api_put_fanAck_(STACK_FRAME t_TemperatureControl_Fan_i_Initialization_Api this, t_TemperatureControl_FanAck_Type value);
+
+Unit t_TemperatureControl_Fan_i_Operational_Api_put_fanAck_(STACK_FRAME t_TemperatureControl_Fan_i_Operational_Api this, t_TemperatureControl_FanAck_Type value);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
